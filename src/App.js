@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
-
+import {useState} from 'react';
+import Navbar from './components/Navbar'
+import Carousel from './components/Carousel'
+import Login from './components/login/Login'
+import Galary from './components/galary/Galary'
 function App() {
+  const [loginshow,logintoggle]=useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar logintoggle={logintoggle}/>
+      <Carousel/>
+      <h1>Welcome to React</h1>
+      {loginshow && <Login/>}
+      <Galary/>
     </div>
   );
 }
