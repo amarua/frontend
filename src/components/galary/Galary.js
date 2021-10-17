@@ -1,19 +1,21 @@
-import doctor from './galaryimg/doctor.jpg';
+import { useEffect } from 'react';
 import './galarystyle.css';
 function Galary() {
-    let t=document.querySelectorAll(".box-for-galary");
-    for(let i=0;i<t.length;i++){
-        t[i].onmouseover = function() {
-        this.children[1].style.transform = "translateX(0px)";
-        this.children[0].style.transform = "translateX(0px)";
+    useEffect(()=>{
+        let t=document.querySelectorAll(".box-for-galary");
+        for(let i=0;i<t.length;i++){
+            t[i].onmouseover = function() {
+            this.children[1].style.transform = "translateX(0px)";
+            this.children[0].style.transform = "translateX(0px)";
+            }
         }
-    }
-    for(let i=0;i<t.length;i++){
-        t[i].onmouseleave = function() {
-        this.children[1].style.transform = "translateX(-20px)";
-        this.children[0].style.transform = "translateX(-250px)";
+        for(let i=0;i<t.length;i++){
+            t[i].onmouseleave = function() {
+            this.children[1].style.transform = "translateX(-20px)";
+            this.children[0].style.transform = "translateX(-250px)";
+            }
         }
-    }
+    });
   return (
     <div className="Galary">
             <div className="galary">

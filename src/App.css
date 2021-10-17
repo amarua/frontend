@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.brandname {
+  height: 50px;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 30px;
+}
+footer {
+  background-color: rosybrown;
+}
+a {
+  color: #282c34;
+}
